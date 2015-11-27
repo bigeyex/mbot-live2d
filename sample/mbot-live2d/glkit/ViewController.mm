@@ -121,7 +121,23 @@ using namespace live2d;
     self.voiceRecognizer = [[MBRecognizerDelegate alloc] init];
     self.simSimiRequestDelegate = [[MBSimSimiRequestDelegate alloc] init];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRecognizerStartListening:) name:@"RecognizerStartListening" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onStartSpeaking:) name:@"TTSSpeakStarted" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveRecognitionResult:) name:@"ReceiveRecognitionResult" object:nil];
+}
+
+
+- (void)onRecognizerStartListening:(NSNotification*)note{
+    [statusLabel setText:@"Listening"];
+}
+
+- (void)onStartSpeaking:(NSNotification*)note{
+    [statusLabel setText:@"Speaking"];
+}
+
+- (void)onReceiveRecognitionResult:(NSNotification*)notification{
+    [textLabel setText:notification.object];
+    [statusLabel setText:@"Thinking"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -50,6 +50,7 @@
 - (void)onSpeakFinished:(NSNotification*)notification{
     busy = false;
     [_iFlySpeechRecognizer startListening];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RecognizerStartListening" object:nil];
 }
 
 - (void)onSpeakStarted:(NSNotification*)notification{
@@ -109,7 +110,7 @@
     [_iFlySpeechRecognizer setDelegate:self];
     
     [_iFlySpeechRecognizer startListening];
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RecognizerStartListening" object:nil];
 
 }
 
