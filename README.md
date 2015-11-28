@@ -5,7 +5,7 @@ Upon hearing specific command such as "forward", "backward" and "turn", it will 
 
 This XCode project includes:
 - a mBot bluetooth control program
-- a live-2d virtual avartar
+- a live-2d virtual avatar
 - a voice-based dialog engine powered by iFlytech API and SimSimi/Tuling Robot.
 
 
