@@ -27,6 +27,7 @@
 		888628E11C084F2E002CAA0F /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E01C084F2E002CAA0F /* ISRDataHelper.m */; };
 		888628E41C085236002CAA0F /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E31C085236002CAA0F /* IATConfig.m */; };
 		888628E81C0855E5002CAA0F /* MBSimSimiRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E71C0855E5002CAA0F /* MBSimSimiRequestDelegate.m */; };
+		88A8EDA71C099F9900EDAB28 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 88A8EDA61C099F9900EDAB28 /* README.md */; };
 		88D943711C0838250094B059 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D943701C0838250094B059 /* iflyMSC.framework */; };
 		88D943731C0838680094B059 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D943721C0838680094B059 /* AVFoundation.framework */; };
 		88D943751C0838710094B059 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D943741C0838710094B059 /* SystemConfiguration.framework */; };
@@ -81,6 +82,7 @@
 		888628E31C085236002CAA0F /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		888628E61C0855E5002CAA0F /* MBSimSimiRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSimSimiRequestDelegate.h; sourceTree = "<group>"; };
 		888628E71C0855E5002CAA0F /* MBSimSimiRequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSimSimiRequestDelegate.m; sourceTree = "<group>"; };
+		88A8EDA61C099F9900EDAB28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		88D943701C0838250094B059 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		88D943721C0838680094B059 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		88D943741C0838710094B059 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -154,6 +156,7 @@
 				7A33E62017B2414400B7FF33 /* MainViewController */,
 				7A33E61517B2414400B7FF33 /* Frameworks */,
 				7A33E61417B2414400B7FF33 /* Products */,
+				88A8EDA61C099F9900EDAB28 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +379,7 @@
 				7A33E62717B2414400B7FF33 /* main.m in Sources */,
 				888628E81C0855E5002CAA0F /* MBSimSimiRequestDelegate.m in Sources */,
 				7A33E62B17B2414400B7FF33 /* AppDelegate.mm in Sources */,
+				88A8EDA71C099F9900EDAB28 /* README.md in Sources */,
 				88D943921C084A560094B059 /* MBRecognizerDelegate.m in Sources */,
 				88F065E51C09890500C78522 /* MBotRandomMovementCommander.m in Sources */,
 				7A33E63817B2414400B7FF33 /* ViewController.mm in Sources */,
