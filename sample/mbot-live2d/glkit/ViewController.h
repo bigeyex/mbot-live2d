@@ -13,7 +13,9 @@
 @interface ViewController : GLKViewController
 
 @property (nonatomic,strong) NSObject *voiceRecognizer;
-@property (nonatomic,strong) NSObject *voiceRSynthesizer;
+@property (nonatomic,strong) NSObject *voiceSynthesizer;
 @property (nonatomic,strong) NSObject *simSimiRequestDelegate;
+@property (nonatomic,strong) NSObject *mbotAutoConnector;
+@property (nonatomic,strong) NSObject *mbotVoiceCommander;
 
 @end

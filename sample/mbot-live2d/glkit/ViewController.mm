@@ -13,6 +13,8 @@
 #import "MBTTSDelegate.h"
 #import "MBRecognizerDelegate.h"
 #import "MBSimSimiRequestDelegate.h"
+#import "MBotAutoConnector.h"
+#import "MBotVoiceCommander.h"
 
 using namespace live2d;
 
@@ -117,9 +119,11 @@ using namespace live2d;
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"55f9671c"];
     
     [IFlySpeechUtility createUtility:initString];
-    self.voiceRSynthesizer = [[MBTTSDelegate alloc] init];
+    self.voiceSynthesizer = [[MBTTSDelegate alloc] init];
     self.voiceRecognizer = [[MBRecognizerDelegate alloc] init];
     self.simSimiRequestDelegate = [[MBSimSimiRequestDelegate alloc] init];
+    self.mbotAutoConnector = [[MBotAutoConnector alloc] init];
+    self.mbotVoiceCommander = [[MBotVoiceCommander alloc] init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRecognizerStartListening:) name:@"RecognizerStartListening" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onStartSpeaking:) name:@"TTSSpeakStarted" object:nil];

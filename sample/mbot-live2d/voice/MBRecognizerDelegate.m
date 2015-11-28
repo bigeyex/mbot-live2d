@@ -13,6 +13,7 @@
 @implementation MBRecognizerDelegate
 {
     IFlySpeechRecognizer *_iFlySpeechRecognizer;
+    NSTimer *restartTimer;
     bool busy;
 }
 
@@ -72,7 +73,6 @@
     }
     NSLog(@"_result=%@",_result);
     NSLog(@"resultFromJson=%@",resultFromJson);
-    busy = true;
     if(![resultFromJson isEqualToString:@""]){
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ReceiveRecognitionResult" object:resultFromJson];
         [_iFlySpeechRecognizer cancel];
