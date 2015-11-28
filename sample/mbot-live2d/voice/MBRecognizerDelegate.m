@@ -36,7 +36,9 @@
 }
 
 - (void)onError:(IFlySpeechError *)errorCode{
-    [self startRecognizing];
+    if(!busy){
+        [self startRecognizing];
+    }
 }
 
 - (void)dealloc{
@@ -49,34 +51,31 @@
 
 - (void)onSpeakFinished:(NSNotification*)notification{
     busy = false;
-    [_iFlySpeechRecognizer startListening];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"RecognizerStartListening" object:nil];
+    [self startRecognizing];
 }
 
 - (void)onSpeakStarted:(NSNotification*)notification{
     busy = true;
-    [_iFlySpeechRecognizer stopListening];
 }
 
 - (void)onResults:(NSArray *)results isLast:(BOOL)isLast{
-    if(!busy){
-        NSMutableString *resultString = [[NSMutableString alloc] init];
-        NSDictionary *dic = results[0];
-        for (NSString *key in dic) {
-            [resultString appendFormat:@"%@",key];
-        }
-        _result =[NSString stringWithFormat:@"%@",resultString];
-        NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
-        
-        if (isLast){
-            NSLog(@"听写结果(json)：%@测试",  self.result);
-        }
-        NSLog(@"_result=%@",_result);
-        NSLog(@"resultFromJson=%@",resultFromJson);
-        busy = true;
-        if(![resultFromJson isEqualToString:@""]){
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReceiveRecognitionResult" object:resultFromJson];
-        }
+    NSMutableString *resultString = [[NSMutableString alloc] init];
+    NSDictionary *dic = results[0];
+    for (NSString *key in dic) {
+        [resultString appendFormat:@"%@",key];
+    }
+    _result =[NSString stringWithFormat:@"%@",resultString];
+    NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
+    
+    if (isLast){
+        NSLog(@"听写结果(json)：%@测试",  self.result);
+    }
+    NSLog(@"_result=%@",_result);
+    NSLog(@"resultFromJson=%@",resultFromJson);
+    busy = true;
+    if(![resultFromJson isEqualToString:@""]){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ReceiveRecognitionResult" object:resultFromJson];
+        [_iFlySpeechRecognizer cancel];
     }
 }
 
