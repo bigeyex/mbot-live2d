@@ -27,6 +27,11 @@
     [self placeSimSimiRequest:[notification object]];
 }
 
+/**
+ *  send a HTTP request for AI dialog response from services like SimSimi or Tuling.
+ *
+ *  @param question the question for AI to answer
+ */
 - (void)placeSimSimiRequest:(NSString*)question{
     NSString *urlString = [NSString stringWithFormat:@"http://www.tuling123.com/openapi/api?key=12dd0fc44298389dbc3b38faec8fd1a6&info=%@", [question stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     

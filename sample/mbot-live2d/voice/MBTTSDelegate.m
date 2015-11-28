@@ -5,9 +5,14 @@
 //  Created by Wang Yu on 11/27/15.
 //  Copyright © 2015 Makeblock. All rights reserved.
 //
+//  purpose: provide text-to-speech service using Xunfei API
 
 #import "MBTTSDelegate.h"
 
+/**
+ *  If you want to speak something, 
+ *  send NSNotification "TTSSpeak" or "ReceiveSimSimiResult" with NSString* as object
+ */
 @implementation MBTTSDelegate{
     bool busy;
 }

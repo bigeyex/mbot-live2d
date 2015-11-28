@@ -33,6 +33,7 @@ using namespace live2d;
 	NSMutableArray* textures ;
     IBOutlet UILabel *textLabel;
     IBOutlet UILabel *statusLabel;
+    bool isSpeaking;
 }
 
 - (void)dealloc
@@ -114,6 +115,7 @@ using namespace live2d;
     
     
     // init xunfei voice recognizer api
+    isSpeaking = false;
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"565953c6"];
     
     [IFlySpeechUtility createUtility:initString];
@@ -125,6 +127,7 @@ using namespace live2d;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRecognizerStartListening:) name:@"RecognizerStartListening" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onStartSpeaking:) name:@"TTSSpeakStarted" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onFinishedSpeaking:) name:@"TTSSpeakFinished" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveRecognitionResult:) name:@"ReceiveRecognitionResult" object:nil];
 }
 
@@ -135,6 +138,12 @@ using namespace live2d;
 
 - (void)onStartSpeaking:(NSNotification*)note{
     [statusLabel setText:@"Speaking"];
+    isSpeaking = true;
+}
+
+- (void)onFinishedSpeaking:(NSNotification*)note{
+    [statusLabel setText:@"Speaking"];
+    isSpeaking = false;
 }
 
 - (void)onReceiveRecognitionResult:(NSNotification*)notification{
@@ -181,7 +190,12 @@ using namespace live2d;
 	
 	double t = UtSystem::getUserTimeMSec()/1000.0 ;
 	live2DModel->setParamFloat("PARAM_ANGLE_X", 30 * sin( t ) );
-    live2DModel->setParamFloat("PARAM_MOUTH_OPEN_Y", sin( 10*t ) );
+    if(isSpeaking){
+        live2DModel->setParamFloat("PARAM_MOUTH_OPEN_Y", sin( 10*t ) );
+    }
+    else{
+        live2DModel->setParamFloat("PARAM_MOUTH_OPEN_Y", 0 );
+    }
 	
 	live2DModel->update() ;
 	live2DModel->draw() ;

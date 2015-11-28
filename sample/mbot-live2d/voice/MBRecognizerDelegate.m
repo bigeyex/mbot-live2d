@@ -10,6 +10,10 @@
 #import "ISRDataHelper.h"
 #import "IATConfig.h"
 
+/**
+ *  A voice recognizer using Xunfei API
+ *  When inited,
+ */
 @implementation MBRecognizerDelegate
 {
     IFlySpeechRecognizer *_iFlySpeechRecognizer;
