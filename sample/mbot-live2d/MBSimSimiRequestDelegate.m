@@ -30,12 +30,16 @@
 - (void)placeSimSimiRequest:(NSString*)question{
     NSString *urlString = [NSString stringWithFormat:@"http://www.tuling123.com/openapi/api?key=12dd0fc44298389dbc3b38faec8fd1a6&info=%@", [question stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
+//    NSString *urlString = [NSString stringWithFormat:@"http://sandbox.api.simsimi.com/request.p?key=61490294-924d-4e15-81d8-a06573accb0b&lc=zh&ft=1.0&text=%@", [question stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
+    
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSString *textResponse = [jsonDict objectForKey:@"text"];
+        NSString *textResponse = [jsonDict objectForKey:@"text"];                   // for tuling
+//        NSString *textResponse = [jsonDict objectForKey:@"response"];             // for simsimi
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ReceiveSimSimiResult" object:textResponse];
         
         busy = false;

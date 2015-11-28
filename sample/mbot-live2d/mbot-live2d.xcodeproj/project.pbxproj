@@ -24,10 +24,6 @@
 		7A33E63117B2414400B7FF33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E63017B2414400B7FF33 /* Default-568h@2x.png */; };
 		7A33E63817B2414400B7FF33 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A33E63717B2414400B7FF33 /* ViewController.mm */; };
 		7A33E63B17B2414400B7FF33 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E63917B2414400B7FF33 /* ViewController.xib */; };
-		7A33E64C17B2503A00B7FF33 /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E64817B2503A00B7FF33 /* texture_00.png */; };
-		7A33E64D17B2503A00B7FF33 /* texture_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E64917B2503A00B7FF33 /* texture_01.png */; };
-		7A33E64E17B2503A00B7FF33 /* texture_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E64A17B2503A00B7FF33 /* texture_02.png */; };
-		7A33E64F17B2503A00B7FF33 /* haru.moc in Resources */ = {isa = PBXBuildFile; fileRef = 7A33E64B17B2503A00B7FF33 /* haru.moc */; };
 		888628E11C084F2E002CAA0F /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E01C084F2E002CAA0F /* ISRDataHelper.m */; };
 		888628E41C085236002CAA0F /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E31C085236002CAA0F /* IATConfig.m */; };
 		888628E81C0855E5002CAA0F /* MBSimSimiRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 888628E71C0855E5002CAA0F /* MBSimSimiRequestDelegate.m */; };
@@ -50,6 +46,10 @@
 		88F065D41C0950C500C78522 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F065D31C0950C500C78522 /* CoreBluetooth.framework */; };
 		88F065D71C0951F600C78522 /* MBotAutoConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F065D61C0951F600C78522 /* MBotAutoConnector.m */; };
 		88F065DB1C09580C00C78522 /* MBotVoiceCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F065DA1C09580C00C78522 /* MBotVoiceCommander.m */; };
+		88F065DF1C097F8400C78522 /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F065DD1C097F8400C78522 /* texture_00.png */; };
+		88F065E01C097F8400C78522 /* haru.moc in Resources */ = {isa = PBXBuildFile; fileRef = 88F065DE1C097F8400C78522 /* haru.moc */; };
+		88F065E21C097F8E00C78522 /* haru.model.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F065E11C097F8E00C78522 /* haru.model.json */; };
+		88F065E51C09890500C78522 /* MBotRandomMovementCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F065E41C09890500C78522 /* MBotRandomMovementCommander.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,10 +75,6 @@
 		7A33E63617B2414400B7FF33 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A33E63717B2414400B7FF33 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		7A33E63A17B2414400B7FF33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		7A33E64817B2503A00B7FF33 /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
-		7A33E64917B2503A00B7FF33 /* texture_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_01.png; sourceTree = "<group>"; };
-		7A33E64A17B2503A00B7FF33 /* texture_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_02.png; sourceTree = "<group>"; };
-		7A33E64B17B2503A00B7FF33 /* haru.moc */ = {isa = PBXFileReference; lastKnownFileType = file; name = haru.moc; path = res/haru.moc; sourceTree = "<group>"; };
 		888628DF1C084F2E002CAA0F /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
 		888628E01C084F2E002CAA0F /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		888628E21C085236002CAA0F /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
@@ -114,6 +110,11 @@
 		88F065D61C0951F600C78522 /* MBotAutoConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBotAutoConnector.m; sourceTree = "<group>"; };
 		88F065D91C09580C00C78522 /* MBotVoiceCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBotVoiceCommander.h; sourceTree = "<group>"; };
 		88F065DA1C09580C00C78522 /* MBotVoiceCommander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBotVoiceCommander.m; sourceTree = "<group>"; };
+		88F065DD1C097F8400C78522 /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
+		88F065DE1C097F8400C78522 /* haru.moc */ = {isa = PBXFileReference; lastKnownFileType = file; path = haru.moc; sourceTree = "<group>"; };
+		88F065E11C097F8E00C78522 /* haru.model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = haru.model.json; sourceTree = "<group>"; };
+		88F065E31C09890500C78522 /* MBotRandomMovementCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBotRandomMovementCommander.h; sourceTree = "<group>"; };
+		88F065E41C09890500C78522 /* MBotRandomMovementCommander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBotRandomMovementCommander.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +190,9 @@
 		7A33E62017B2414400B7FF33 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7A33E64717B2503A00B7FF33 /* haru.1024 */,
-				7A33E64B17B2503A00B7FF33 /* haru.moc */,
+				88F065DC1C097F8400C78522 /* haru.1024 */,
+				88F065DE1C097F8400C78522 /* haru.moc */,
+				88F065E11C097F8E00C78522 /* haru.model.json */,
 				7A33E62917B2414400B7FF33 /* AppDelegate.h */,
 				7A33E62A17B2414400B7FF33 /* AppDelegate.mm */,
 				7A33E63617B2414400B7FF33 /* ViewController.h */,
@@ -218,17 +220,6 @@
 				0F6B93841980A6CA006B16AE /* icon@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7A33E64717B2503A00B7FF33 /* haru.1024 */ = {
-			isa = PBXGroup;
-			children = (
-				7A33E64817B2503A00B7FF33 /* texture_00.png */,
-				7A33E64917B2503A00B7FF33 /* texture_01.png */,
-				7A33E64A17B2503A00B7FF33 /* texture_02.png */,
-			);
-			name = haru.1024;
-			path = res/haru.1024;
 			sourceTree = "<group>";
 		};
 		888628E51C0855B2002CAA0F /* SimSimi */ = {
@@ -287,8 +278,18 @@
 				88F065D61C0951F600C78522 /* MBotAutoConnector.m */,
 				88F065D91C09580C00C78522 /* MBotVoiceCommander.h */,
 				88F065DA1C09580C00C78522 /* MBotVoiceCommander.m */,
+				88F065E31C09890500C78522 /* MBotRandomMovementCommander.h */,
+				88F065E41C09890500C78522 /* MBotRandomMovementCommander.m */,
 			);
 			name = MBotController;
+			sourceTree = "<group>";
+		};
+		88F065DC1C097F8400C78522 /* haru.1024 */ = {
+			isa = PBXGroup;
+			children = (
+				88F065DD1C097F8400C78522 /* texture_00.png */,
+			);
+			path = haru.1024;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,17 +344,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A33E62517B2414400B7FF33 /* InfoPlist.strings in Resources */,
+				88F065E01C097F8400C78522 /* haru.moc in Resources */,
 				0F6B93851980A6CA006B16AE /* Icon-72.png in Resources */,
 				0F6B93881980A6CA006B16AE /* icon@2x.png in Resources */,
 				7A33E62D17B2414400B7FF33 /* Default.png in Resources */,
+				88F065E21C097F8E00C78522 /* haru.model.json in Resources */,
 				7A33E62F17B2414400B7FF33 /* Default@2x.png in Resources */,
+				88F065DF1C097F8400C78522 /* texture_00.png in Resources */,
 				7A33E63117B2414400B7FF33 /* Default-568h@2x.png in Resources */,
 				7A33E63B17B2414400B7FF33 /* ViewController.xib in Resources */,
-				7A33E64C17B2503A00B7FF33 /* texture_00.png in Resources */,
-				7A33E64D17B2503A00B7FF33 /* texture_01.png in Resources */,
 				0F6B93871980A6CA006B16AE /* icon.png in Resources */,
-				7A33E64E17B2503A00B7FF33 /* texture_02.png in Resources */,
-				7A33E64F17B2503A00B7FF33 /* haru.moc in Resources */,
 				0F6B93861980A6CA006B16AE /* Icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +377,7 @@
 				888628E81C0855E5002CAA0F /* MBSimSimiRequestDelegate.m in Sources */,
 				7A33E62B17B2414400B7FF33 /* AppDelegate.mm in Sources */,
 				88D943921C084A560094B059 /* MBRecognizerDelegate.m in Sources */,
+				88F065E51C09890500C78522 /* MBotRandomMovementCommander.m in Sources */,
 				7A33E63817B2414400B7FF33 /* ViewController.mm in Sources */,
 				88D9438F1C083F9C0094B059 /* MBTTSDelegate.m in Sources */,
 				88F065DB1C09580C00C78522 /* MBotVoiceCommander.m in Sources */,

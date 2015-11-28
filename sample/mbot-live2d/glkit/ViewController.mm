@@ -78,8 +78,6 @@ using namespace live2d;
 	NSString* MODEL_FILE = @"haru" ;
 	NSString* TEXTURE_PATH[] ={
 		@"texture_00" ,
-		@"texture_01" ,
-		@"texture_02" ,
 		NULL
 	} ;
 	
@@ -109,14 +107,14 @@ using namespace live2d;
 	glOrthof(
              0,
              modelWidth,
-             modelWidth / (width/height),
-             0,
+             modelWidth / (width/height)+400,
+             400,
              0.5f, -0.5f
              );
     
     
-    // init xunfei api
-    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"55f9671c"];
+    // init xunfei voice recognizer api
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"565953c6"];
     
     [IFlySpeechUtility createUtility:initString];
     self.voiceSynthesizer = [[MBTTSDelegate alloc] init];
@@ -177,12 +175,13 @@ using namespace live2d;
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
 //    glClearColor(0.65f, 0.65f, 0.65f, 1.0f);
-    glClearColor(0, 0, 0, 1.0f);
+//    glClearColor(0, 0, 0, 1.0f);
+    glClearColor(1, 1, 1, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
 	double t = UtSystem::getUserTimeMSec()/1000.0 ;
 	live2DModel->setParamFloat("PARAM_ANGLE_X", 30 * sin( t ) );
-    live2DModel->setParamFloat("PARAM_MOUTH_FORM", 30 * sin( t ) );
+    live2DModel->setParamFloat("PARAM_MOUTH_OPEN_Y", sin( 10*t ) );
 	
 	live2DModel->update() ;
 	live2DModel->draw() ;
